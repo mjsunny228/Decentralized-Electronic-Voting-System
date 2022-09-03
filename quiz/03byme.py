@@ -78,14 +78,26 @@ class Tab2(QWidget):
         self.vbox_layout2.addWidget(self.button2)
         self.vbox_layout2.addWidget(self.button3)
 
+        self.vote_list_group_box = QGroupBox('투표 목록')
+
+        self.vote_list = QListWidget()
+        self.vote_list.addItem('투표1')
+        self.vote_list.addItem('투표2')
+
+        self.vote_list_vbox_layout = QVBoxLayout()
+        self.vote_list_vbox_layout.addWidget(self.vote_list)
+
+
         self.group_box1.setLayout(self.hbox_layout)
         self.group_box2.setLayout(self.vbox_layout)
         self.group_box3.setLayout(self.vbox_layout2)
+        self.vote_list_group_box.setLayout(self.vote_list_vbox_layout)
 
         self.grid_layout = QGridLayout()
         self.grid_layout.addWidget(self.group_box1, 0, 0, 1, 2)
         self.grid_layout.addWidget(self.group_box3, 2, 1, 1, 1)
         self.grid_layout.addWidget(self.group_box2, 3, 0, 1, 2)
+        self.grid_layout.addWidget(self.vote_list_group_box,2,0,1,1)
 
         self.setLayout(self.grid_layout)
 
