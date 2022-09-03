@@ -73,18 +73,18 @@ class Tab2(QWidget):
         self.button2 = QPushButton('A2')
         self.button3 = QPushButton('A3')
 
-        self.vbox_layout = QVBoxLayout()
-        self.vbox_layout.addWidget(self.button1)
-        self.vbox_layout.addWidget(self.button2)
-        self.vbox_layout.addWidget(self.button3)
+        self.vbox_layout2 = QVBoxLayout()
+        self.vbox_layout2.addWidget(self.button1)
+        self.vbox_layout2.addWidget(self.button2)
+        self.vbox_layout2.addWidget(self.button3)
 
-        self.group_box1.setLayout(self.vbox_layout)
+        self.group_box1.setLayout(self.hbox_layout)
         self.group_box2.setLayout(self.vbox_layout)
-        self.group_box3.setLayout(self.vbox_layout)
+        self.group_box3.setLayout(self.vbox_layout2)
 
         self.grid_layout = QGridLayout()
         self.grid_layout.addWidget(self.group_box1, 0, 0, 1, 2)
-        self.grid_layout.addWidget(self.group_box3, 2, 0, 1, 1)
+        self.grid_layout.addWidget(self.group_box3, 2, 1, 1, 1)
         self.grid_layout.addWidget(self.group_box2, 3, 0, 1, 2)
 
         self.setLayout(self.grid_layout)
