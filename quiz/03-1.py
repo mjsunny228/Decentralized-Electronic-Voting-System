@@ -7,16 +7,18 @@ class GUI(QWidget):
         super().__init__()
         self.setWindowTitle('제목')
 
-        self.group_box = QGroupBox('그룹')
+        self.group_box = QGroupBox('투표')
 
-        self.button1 = QPushButton('버튼 1')
-        self.button2 = QPushButton('버튼 2')
+        self.button1 = QPushButton('A1')
+        self.button2 = QPushButton('A2')
+        self.button3 = QPushButton('A3')
 
-        self.hbox_layout=QHBoxLayout()
-        self.hbox_layout.addWidget(self.button1)
-        self.hbox_layout.addWidget(self.button2)
+        self.vbox_layout=QVBoxLayout()
+        self.vbox_layout.addWidget(self.button1)
+        self.vbox_layout.addWidget(self.button2)
+        self.vbox_layout.addWidget(self.button3)
 
-        self.group_box.setLayout(self.hbox_layout)
+        self.group_box.setLayout(self.vbox_layout)
 
         self.grid_layout = QGridLayout()
         self.grid_layout.addWidget(self.group_box, 0, 0, 1, 1)

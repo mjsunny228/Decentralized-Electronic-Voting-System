@@ -5,7 +5,7 @@ import sys
 class GUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('제목') #이거 외에는 다 고정코드
+        self.setWindowTitle('제목')
 
         self.button1 = QPushButton('버튼 1')
         self.button2 = QPushButton('버튼 2')
